@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="250dp"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="250dp">
+
+                <ImageButton
+                    android:id="@+id/camera_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
+
+                <ImageView
+                    android:id="@+id/click_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:ems="10"
+            android:hint="Hi buddy "
+            android:inputType="textPersonName"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Press here"
+            android:minHeight="48dp"
+            android:onClick="pressTxtBtn"
+            android:textSize="25sp" />
+
+        //Spinner Section
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:minHeight="48dp" />
+
+        //RadioButton Select
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Select your payment ?"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- add RadioGroup which contain the many RadioButton-->
+        <RadioGroup
+
+            android:id="@+id/groupradio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/radia_id1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Razorpay"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/radia_id2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Paytm"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/radia_id3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Pay"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/radia_id4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:textSize="20dp" />
+        </RadioGroup>
+
+
+        <!-- add button For Submit the Selected item-->
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            />
+
+        <!-- add clear button for clear the selected item-->
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
